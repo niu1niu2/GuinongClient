@@ -10,12 +10,10 @@ import com.guinong.net.NetworkException;
 public interface IAsyncCallback {
 
     /**
-     * 异常
-     *  @param error
-     *            错误
      *
+     * @param error
+     * @param userState
      */
-    void onError(NetworkException error);
-
+    void onError(NetworkException error,Object userState);
 
 }

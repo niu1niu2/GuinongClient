@@ -1,6 +1,7 @@
 package com.guinong.net.callback;
 
 import com.guinong.net.NetworkMessage;
+import com.guinong.net.NetworkResultMessage;
 
 /**
  * @author csn
@@ -17,5 +18,5 @@ public interface IAsyncMessageCallback extends IAsyncCallback {
      * @param userState
      *            用户状态
      */
-    void onComplete(NetworkMessage message, Object userState);
+    void onComplete(NetworkResultMessage message, Object userState);
 }

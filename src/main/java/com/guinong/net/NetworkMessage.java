@@ -30,32 +30,5 @@ public class NetworkMessage implements Serializable {
         this.error = error;
     }
 
-    private Object result;
 
-    public Object getResult() {
-        return result;
-    }
-
-    public void setResult(Object result) {
-        this.result = result;
-    }
-
-    /**
-     *
-     * @param resultClass
-     * @param <TResult>
-     * @return
-     */
-    public <TResult> TResult ToResult(Class<TResult> resultClass){
-        if(result==null){
-            return  null;
-        }
-        if(result instanceof String){
-            Gson gson = new Gson();
-            return gson.fromJson(result.toString(), resultClass);
-        }
-        else {
-        return  null;
-        }
-    }
 }
